@@ -7,14 +7,14 @@
 
 import UIKit
 
-class SecondTabViewController: UIViewController {
+final class SecondTabViewController: UIViewController {
 
     private let image = UIImageView()
     private let firstName = UILabel()
     private let lastName = UILabel()
     private let bioLabel = UILabel()
     private let biography = UILabel()
-    let scrollView = UIScrollView()
+    private let scrollView = UIScrollView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

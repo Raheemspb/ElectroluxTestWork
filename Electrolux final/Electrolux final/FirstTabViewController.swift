@@ -16,7 +16,14 @@ final class FirstTabViewController: UIViewController {
     private var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setupSearchBar()
+        setupCollectionView()
+        getData {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     private func setupSearchBar() {
@@ -86,7 +93,6 @@ extension FirstTabViewController: UICollectionViewDelegate {
         let productImageViewController = ProductImageViewController()
         
         navigationController?.pushViewController(productImageViewController, animated: true)
-        productImageViewController.productTitle.text = "\(indexPath.item)"
         let currentUrlString = photoArray[indexPath.item].urlO
         guard let currentUrl = URL(string: returnUrl(url: currentUrlString)) else { return }
         DispatchQueue.global(qos: .utility).async {

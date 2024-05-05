@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductImageViewController: UIViewController {
+final class ProductImageViewController: UIViewController {
     
     var productImage = UIImageView()
     var imageData = Data()
@@ -17,7 +17,7 @@ class ProductImageViewController: UIViewController {
         setupImage()
     }
     
-    func setupImage() {
+    private func setupImage() {
         view.addSubview(productImage)
         view.backgroundColor = .systemGray5
         productImage.contentMode = .scaleAspectFit
