@@ -17,6 +17,9 @@
 		AA40F3F42BE7CC8100041DCB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AA40F3F32BE7CC8100041DCB /* SDWebImage */; };
 		AA40F3F62BE7CCA500041DCB /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */; };
 		AA40F3F82BE7CCD000041DCB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F72BE7CCD000041DCB /* TabBarController.swift */; };
+		AA40F3FA2BE7D04100041DCB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */; };
+		AA40F3FD2BE7D09D00041DCB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA40F3FC2BE7D09D00041DCB /* SnapKit */; };
+		AA40F3FF2BE7DC1800041DCB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		AA40F3E92BE7C9DB00041DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		AA40F3F72BE7CCD000041DCB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA40F3FD2BE7D09D00041DCB /* SnapKit in Frameworks */,
 				AA40F3F42BE7CC8100041DCB /* SDWebImage in Frameworks */,
 				AA40F3F12BE7CC5800041DCB /* PureLayout in Frameworks */,
 			);
@@ -67,6 +73,8 @@
 				AA40F3DB2BE7C9D900041DCB /* AppDelegate.swift */,
 				AA40F3DD2BE7C9D900041DCB /* SceneDelegate.swift */,
 				AA40F3DF2BE7C9D900041DCB /* ViewController.swift */,
+				AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */,
+				AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */,
 				AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */,
 				AA40F3F72BE7CCD000041DCB /* TabBarController.swift */,
 				AA40F3E12BE7C9D900041DCB /* Main.storyboard */,
@@ -96,6 +104,7 @@
 			packageProductDependencies = (
 				AA40F3F02BE7CC5800041DCB /* PureLayout */,
 				AA40F3F32BE7CC8100041DCB /* SDWebImage */,
+				AA40F3FC2BE7D09D00041DCB /* SnapKit */,
 			);
 			productName = "Electrolux final";
 			productReference = AA40F3D82BE7C9D900041DCB /* Electrolux final.app */;
@@ -128,6 +137,7 @@
 			packageReferences = (
 				AA40F3EF2BE7CC5800041DCB /* XCRemoteSwiftPackageReference "PureLayout" */,
 				AA40F3F22BE7CC8100041DCB /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				AA40F3FB2BE7D09D00041DCB /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = AA40F3D92BE7C9D900041DCB /* Products */;
 			projectDirPath = "";
@@ -158,6 +168,8 @@
 			files = (
 				AA40F3E02BE7C9D900041DCB /* ViewController.swift in Sources */,
 				AA40F3DC2BE7C9D900041DCB /* AppDelegate.swift in Sources */,
+				AA40F3FA2BE7D04100041DCB /* CollectionViewCell.swift in Sources */,
+				AA40F3FF2BE7DC1800041DCB /* NetworkManager.swift in Sources */,
 				AA40F3F62BE7CCA500041DCB /* SecondTabViewController.swift in Sources */,
 				AA40F3F82BE7CCD000041DCB /* TabBarController.swift in Sources */,
 				AA40F3DE2BE7C9D900041DCB /* SceneDelegate.swift in Sources */,
@@ -396,6 +408,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AA40F3FB2BE7D09D00041DCB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +428,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA40F3F22BE7CC8100041DCB /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		AA40F3FC2BE7D09D00041DCB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA40F3FB2BE7D09D00041DCB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
