@@ -12,30 +12,20 @@ let urlString = "https://flickr.com/services/rest/?method=flickr.photos.search&a
 // MARK: - Photos
 struct Photos: Codable {
     let photos: PhotosClass
-    let stat: String
 }
 
 // MARK: - PhotosClass
 struct PhotosClass: Codable {
-    let page, pages, perpage, total: Int
     let photo: [Photo]
 }
 
 // MARK: - Photo
 struct Photo: Codable {
-    let id, owner, secret, server: String
-    let farm: Int
-    let title: String
-    let ispublic, isfriend, isfamily: Int
     let urlO: String?
-    var imageData: Data?
-    let heightO, widthO: Int?
+
     
     enum CodingKeys: String, CodingKey {
-        case id, owner, secret, server, farm, title, ispublic, isfriend, isfamily
         case urlO = "url_o"
-        case heightO = "height_o"
-        case widthO = "width_o"
     }
 }
 

@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import PureLayout
+import SDWebImage
 
 final class FirstTabViewController: UIViewController {
 
@@ -64,17 +65,40 @@ final class FirstTabViewController: UIViewController {
 
 extension FirstTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        photoArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseId, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+        cell.backgroundColor = .clear
+        let currentUrl = photoArray[indexPath.item].urlO
+        cell.image.sd_setImage(with: URL(string: returnUrl(url: currentUrl)), placeholderImage: UIImage(systemName: "questionmark.app"), options: [.progressiveLoad])
+return cell
     }
     
     
 }
 
 extension FirstTabViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Select", indexPath.item)
+        
+        let productImageViewController = ProductImageViewController()
+        
+        navigationController?.pushViewController(productImageViewController, animated: true)
+        productImageViewController.productTitle.text = "\(indexPath.item)"
+        let currentUrlString = photoArray[indexPath.item].urlO
+        guard let currentUrl = URL(string: returnUrl(url: currentUrlString)) else { return }
+        DispatchQueue.global(qos: .utility).async {
+            let imageData = try? Data(contentsOf: currentUrl)
+            do {
+                DispatchQueue.main.async {
+                    guard let imageData = imageData else { return }
+                    productImageViewController.productImage.image = UIImage(data: imageData)
+                }
+            }
+           
+        }
+    }
 }
 

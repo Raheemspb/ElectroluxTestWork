@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA40F3DC2BE7C9D900041DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3DB2BE7C9D900041DCB /* AppDelegate.swift */; };
 		AA40F3DE2BE7C9D900041DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3DD2BE7C9D900041DCB /* SceneDelegate.swift */; };
-		AA40F3E02BE7C9D900041DCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3DF2BE7C9D900041DCB /* ViewController.swift */; };
+		AA40F3E02BE7C9D900041DCB /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3DF2BE7C9D900041DCB /* FirstTabViewController.swift */; };
 		AA40F3E32BE7C9D900041DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E12BE7C9D900041DCB /* Main.storyboard */; };
 		AA40F3E52BE7C9DB00041DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */; };
 		AA40F3E82BE7C9DB00041DCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E62BE7C9DB00041DCB /* LaunchScreen.storyboard */; };
@@ -20,13 +20,15 @@
 		AA40F3FA2BE7D04100041DCB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */; };
 		AA40F3FD2BE7D09D00041DCB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA40F3FC2BE7D09D00041DCB /* SnapKit */; };
 		AA40F3FF2BE7DC1800041DCB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */; };
+		AA40F4012BE7DEB000041DCB /* ProductImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F4002BE7DEB000041DCB /* ProductImageViewController.swift */; };
+		AA40F4032BE7E01C00041DCB /* MessiBiofrafy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F4022BE7E01C00041DCB /* MessiBiofrafy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA40F3D82BE7C9D900041DCB /* Electrolux final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Electrolux final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA40F3DB2BE7C9D900041DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA40F3DD2BE7C9D900041DCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA40F3DF2BE7C9D900041DCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA40F3DF2BE7C9D900041DCB /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
 		AA40F3E22BE7C9D900041DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA40F3E72BE7C9DB00041DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,8 @@
 		AA40F3F72BE7CCD000041DCB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AA40F4002BE7DEB000041DCB /* ProductImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageViewController.swift; sourceTree = "<group>"; };
+		AA40F4022BE7E01C00041DCB /* MessiBiofrafy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessiBiofrafy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +76,12 @@
 			children = (
 				AA40F3DB2BE7C9D900041DCB /* AppDelegate.swift */,
 				AA40F3DD2BE7C9D900041DCB /* SceneDelegate.swift */,
-				AA40F3DF2BE7C9D900041DCB /* ViewController.swift */,
+				AA40F3DF2BE7C9D900041DCB /* FirstTabViewController.swift */,
+				AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */,
+				AA40F4022BE7E01C00041DCB /* MessiBiofrafy.swift */,
+				AA40F4002BE7DEB000041DCB /* ProductImageViewController.swift */,
 				AA40F3F92BE7D04100041DCB /* CollectionViewCell.swift */,
 				AA40F3FE2BE7DC1800041DCB /* NetworkManager.swift */,
-				AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */,
 				AA40F3F72BE7CCD000041DCB /* TabBarController.swift */,
 				AA40F3E12BE7C9D900041DCB /* Main.storyboard */,
 				AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */,
@@ -166,10 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA40F3E02BE7C9D900041DCB /* ViewController.swift in Sources */,
+				AA40F4032BE7E01C00041DCB /* MessiBiofrafy.swift in Sources */,
+				AA40F3E02BE7C9D900041DCB /* FirstTabViewController.swift in Sources */,
 				AA40F3DC2BE7C9D900041DCB /* AppDelegate.swift in Sources */,
 				AA40F3FA2BE7D04100041DCB /* CollectionViewCell.swift in Sources */,
 				AA40F3FF2BE7DC1800041DCB /* NetworkManager.swift in Sources */,
+				AA40F4012BE7DEB000041DCB /* ProductImageViewController.swift in Sources */,
 				AA40F3F62BE7CCA500041DCB /* SecondTabViewController.swift in Sources */,
 				AA40F3F82BE7CCD000041DCB /* TabBarController.swift in Sources */,
 				AA40F3DE2BE7C9D900041DCB /* SceneDelegate.swift in Sources */,
