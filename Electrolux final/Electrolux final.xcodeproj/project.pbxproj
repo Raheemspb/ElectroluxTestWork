@@ -13,6 +13,10 @@
 		AA40F3E32BE7C9D900041DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E12BE7C9D900041DCB /* Main.storyboard */; };
 		AA40F3E52BE7C9DB00041DCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */; };
 		AA40F3E82BE7C9DB00041DCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA40F3E62BE7C9DB00041DCB /* LaunchScreen.storyboard */; };
+		AA40F3F12BE7CC5800041DCB /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AA40F3F02BE7CC5800041DCB /* PureLayout */; };
+		AA40F3F42BE7CC8100041DCB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AA40F3F32BE7CC8100041DCB /* SDWebImage */; };
+		AA40F3F62BE7CCA500041DCB /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */; };
+		AA40F3F82BE7CCD000041DCB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA40F3F72BE7CCD000041DCB /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA40F3E72BE7C9DB00041DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA40F3E92BE7C9DB00041DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		AA40F3F72BE7CCD000041DCB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA40F3F42BE7CC8100041DCB /* SDWebImage in Frameworks */,
+				AA40F3F12BE7CC5800041DCB /* PureLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 				AA40F3DB2BE7C9D900041DCB /* AppDelegate.swift */,
 				AA40F3DD2BE7C9D900041DCB /* SceneDelegate.swift */,
 				AA40F3DF2BE7C9D900041DCB /* ViewController.swift */,
+				AA40F3F52BE7CCA500041DCB /* SecondTabViewController.swift */,
+				AA40F3F72BE7CCD000041DCB /* TabBarController.swift */,
 				AA40F3E12BE7C9D900041DCB /* Main.storyboard */,
 				AA40F3E42BE7C9DB00041DCB /* Assets.xcassets */,
 				AA40F3E62BE7C9DB00041DCB /* LaunchScreen.storyboard */,
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = "Electrolux final";
+			packageProductDependencies = (
+				AA40F3F02BE7CC5800041DCB /* PureLayout */,
+				AA40F3F32BE7CC8100041DCB /* SDWebImage */,
+			);
 			productName = "Electrolux final";
 			productReference = AA40F3D82BE7C9D900041DCB /* Electrolux final.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = AA40F3CF2BE7C9D900041DCB;
+			packageReferences = (
+				AA40F3EF2BE7CC5800041DCB /* XCRemoteSwiftPackageReference "PureLayout" */,
+				AA40F3F22BE7CC8100041DCB /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = AA40F3D92BE7C9D900041DCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +158,8 @@
 			files = (
 				AA40F3E02BE7C9D900041DCB /* ViewController.swift in Sources */,
 				AA40F3DC2BE7C9D900041DCB /* AppDelegate.swift in Sources */,
+				AA40F3F62BE7CCA500041DCB /* SecondTabViewController.swift in Sources */,
+				AA40F3F82BE7CCD000041DCB /* TabBarController.swift in Sources */,
 				AA40F3DE2BE7C9D900041DCB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA40F3EF2BE7CC5800041DCB /* XCRemoteSwiftPackageReference "PureLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureLayout/PureLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		AA40F3F22BE7CC8100041DCB /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA40F3F02BE7CC5800041DCB /* PureLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA40F3EF2BE7CC5800041DCB /* XCRemoteSwiftPackageReference "PureLayout" */;
+			productName = PureLayout;
+		};
+		AA40F3F32BE7CC8100041DCB /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA40F3F22BE7CC8100041DCB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA40F3D02BE7C9D900041DCB /* Project object */;
 }
