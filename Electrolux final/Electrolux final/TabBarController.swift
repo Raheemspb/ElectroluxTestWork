@@ -25,11 +25,14 @@ final class TabBarController: UITabBarController {
                                                   title: "Second Tab")
         ]
     }
-    
-    private func generateViewController(viewController: UIViewController, image: UIImage?, title: String) -> UIViewController {
+
+    private func generateViewController(
+        viewController: UIViewController,
+        image: UIImage?,
+        title: String
+    ) -> UIViewController {
         viewController.tabBarItem.image = image
         viewController.tabBarItem.title = title
         return viewController
     }
-
 }

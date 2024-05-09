@@ -25,7 +25,7 @@ final class FirstTabViewController: UIViewController {
             }
         }
     }
-    
+
     private func setupSearchBar() {
         searchBar = UISearchBar()
         searchBar.searchBarStyle = .minimal
@@ -37,7 +37,7 @@ final class FirstTabViewController: UIViewController {
         searchBar.autoPinEdge(toSuperviewEdge: .leading)
         searchBar.autoPinEdge(toSuperviewEdge: .trailing)
     }
-    
+
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: .zero,
                                           collectionViewLayout:
@@ -50,14 +50,12 @@ final class FirstTabViewController: UIViewController {
         collectionView.register(CollectionViewCell.self,
                                 forCellWithReuseIdentifier:
                                     CollectionViewCell.reuseId)
-        
         collectionView.autoPinEdge(.top, to: .bottom, of: searchBar)
         collectionView.autoPinEdge(toSuperviewEdge: .leading)
         collectionView.autoPinEdge(toSuperviewEdge: .trailing)
         collectionView.autoPinEdge(toSuperviewSafeArea: .bottom)
-        
     }
-    
+
     private func setupCollectionViewFlowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -66,35 +64,37 @@ final class FirstTabViewController: UIViewController {
         layout.minimumInteritemSpacing = 50
         return layout
     }
-
-
 }
 
 extension FirstTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         photoArray.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseId, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CollectionViewCell.reuseId,
+            for: indexPath
+        ) as? CollectionViewCell else { return UICollectionViewCell() }
         cell.backgroundColor = .clear
-        let currentUrl = photoArray[indexPath.item].urlO
-        cell.image.sd_setImage(with: URL(string: returnUrl(url: currentUrl)), placeholderImage: UIImage(systemName: "questionmark.app"), options: [.progressiveLoad])
+        guard let currentUrl = photoArray[indexPath.item].urlO else { return cell }
+        cell.image.sd_setImage(with: URL(string: currentUrl), placeholderImage: nil, options: [.progressiveLoad])
 return cell
     }
-    
-    
 }
 
 extension FirstTabViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Select", indexPath.item)
-        
+
         let productImageViewController = ProductImageViewController()
-        
+
         navigationController?.pushViewController(productImageViewController, animated: true)
-        let currentUrlString = photoArray[indexPath.item].urlO
-        guard let currentUrl = URL(string: returnUrl(url: currentUrlString)) else { return }
+        guard let currentUrlString = photoArray[indexPath.item].urlO else { return }
+        guard let currentUrl = URL(string: currentUrlString) else { return }
         DispatchQueue.global(qos: .utility).async {
             let imageData = try? Data(contentsOf: currentUrl)
             do {
@@ -103,8 +103,6 @@ extension FirstTabViewController: UICollectionViewDelegate {
                     productImageViewController.productImage.image = UIImage(data: imageData)
                 }
             }
-           
         }
     }
 }
-

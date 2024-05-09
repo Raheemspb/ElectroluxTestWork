@@ -21,7 +21,6 @@ final class SecondTabViewController: UIViewController {
         setupSecondViewController()
         setupConstraints()
     }
-    
     private func setupSecondViewController() {
         view.addSubview(scrollView)
         view.backgroundColor = .white
@@ -30,27 +29,19 @@ final class SecondTabViewController: UIViewController {
         scrollView.addSubview(lastName)
         scrollView.addSubview(bioLabel)
         scrollView.addSubview(biography)
-        
         image.image = UIImage(named: "messi")
         image.contentMode = .scaleAspectFill
-        
         firstName.text = "Lionel"
         firstName.numberOfLines = 0
-        
         lastName.text = "Messi"
         lastName.numberOfLines = 0
-        
         bioLabel.text = "BIO"
         bioLabel.font = UIFont.boldSystemFont(ofSize: 24)
         bioLabel.textAlignment = .center
-        
-        
         biography.text = messiBio
-        
         biography.numberOfLines = 0
         scrollView.isScrollEnabled = true
     }
-    
     private func setupConstraints() {
         scrollView.autoPinEdge(toSuperviewEdge: .leading)
         scrollView.autoPinEdge(toSuperviewEdge: .trailing)
@@ -64,10 +55,11 @@ final class SecondTabViewController: UIViewController {
 
         firstName.autoPinEdge(.top, to: .top, of: image)
         firstName.autoPinEdge(.leading, to: .trailing, of: image, withOffset: 30)
+        firstName.autoPinEdge(.trailing, to: .trailing, of: image, withOffset: 120)
 
         lastName.autoPinEdge(.top, to: .top, of: image)
-        lastName.autoPinEdge(.leading, to: .trailing, of: firstName, withOffset: 30)
-        lastName.autoPinEdge(toSuperviewEdge: .trailing, withInset: 30)
+        lastName.autoPinEdge(.leading, to: .trailing, of: firstName, withOffset: 20)
+        lastName.autoPinEdge(.trailing, to: .trailing, of: view, withOffset: -15)
 
         bioLabel.autoPinEdge(.leading, to: .leading, of: view)
         bioLabel.autoPinEdge(.trailing, to: .trailing, of: view)
