@@ -43,7 +43,6 @@ final class FirstTabViewController: UIViewController {
                                           collectionViewLayout:
                                             setupCollectionViewFlowLayout())
         view.addSubview(collectionView)
-        //        collectionView.backgroundColor = .magenta
         collectionView.contentInset = .init(top: 20, left: 30, bottom: 0, right: 30)
         collectionView.dataSource = self
         collectionView.delegate = self
